@@ -1,15 +1,38 @@
-//
-//  main.cpp
-//  c++ exercise1
-//
-//  Created by s20181102932 on 2019/6/23.
-//  Copyright © 2019 s20181102932. All rights reserved.
-//
-
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+class Student{
+public:
+    Student(int a,string b,char c){
+        num=a;
+        name=b;
+        sex=c;
+    }
+    ~Student(){
+        cout<<"Destructor called."<<'\n';
+    }
+    void display(){
+        cout<<"Constructor called."<<'\n'<<"num:"<<num<<'\n'<<"name:"<<name<<'\n'<<"sex:"<<sex<<'\n';
+        
+    }
+    
+private:
+    int num;
+    string name;
+    char sex;
+    
+};
+int main()
+{Student stud1(10010,"Wang_li",'f');
+    stud1.display();
+    Student stud2(10011,"Zhang_fun",'m');
+    stud2.display();
     return 0;
 }
+#include <iostream>
+#include <fstream>
+using namespace std;
+struct student{
+    char num[10];
+    char xueyuan[10];
+    char xingming[10];
+};
